@@ -1,0 +1,16 @@
+{
+    "<%=page_item%>": [{
+            <% if(data.length){
+                for(var i = 0;i < data.length;i++) {
+                if (i > 0) { %>
+                }, {
+                <% } else { %>
+                <% } %>
+                "Customer ID": "<%=data[i].customerID%>",
+                "VIP Status": "<%=data[i].vipStatus%>",
+                "Balance": "<%=data[i].balance%>"
+                <% }
+             } else { %>
+            <% } %>
+        }]
+}
